@@ -42,8 +42,11 @@ articleSchema.pre('validate', function(next) {
 //    console.log('marked:' + marked)
     console.log('this.markdown:' + this.markdown)
     if (this.title) {
+/*
         this.slug = slugify(this.title, { lower: true, strict: true })
-    }
+*/
+        this.slug = this.title
+}
 
     if (this.markdown) {
 /*
